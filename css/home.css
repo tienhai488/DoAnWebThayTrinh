@@ -1,0 +1,364 @@
+.arrow-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 14px;
+  transition: 0.3s all;
+}
+.arrow-top:hover {
+  transform: scale(1.3);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.company-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.company-menu {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.company-menu a {
+  text-decoration: none;
+  border: 2px solid transparent;
+  height: 40px;
+  line-height: 40px;
+}
+
+.company-menu a img {
+  height: 30px;
+}
+
+.company-menu a:hover {
+  transform: scale(1.1);
+  border: 2px solid pink;
+  transition: 0.1s all linear;
+}
+
+.list-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-filter {
+  position: relative;
+}
+
+.btn-filter-link {
+  padding: 8px 14px;
+  border-radius: 32px;
+  margin: 0 4px;
+  color: white;
+  background-color: rgb(88 88 141);
+  max-width: 170px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s all;
+  position: relative;
+}
+
+.btn-filter-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 12px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.btn-filter-link:hover {
+  opacity: 0.8;
+}
+
+.btn-filter .icon-arrow-right {
+  padding: 2px;
+  margin-left: 3px;
+  transition: 0.3s all;
+  transform: rotate(0);
+}
+
+.btn-filter:hover .icon-arrow-right {
+  transform: rotate(90deg);
+}
+
+.btn-filter:hover .menu-filter {
+  display: block;
+}
+
+.menu-filter {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 4px;
+  list-style: none;
+  box-shadow: 1px 1px 4px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  z-index: 10;
+  display: none;
+  overflow: hidden;
+  animation: handleScale 0.3s linear;
+  transform-origin: 20px top;
+}
+
+@keyframes handleScale {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.menu-filter-item a {
+  text-decoration: none;
+  padding: 6px 8px;
+  min-width: 140px;
+  color: black;
+  background-color: white;
+  display: block;
+  font-size: 15px;
+  transition: 0.3s all linear;
+}
+
+.menu-filter-item a:hover {
+  background-color: rgb(230, 228, 228);
+}
+.product-frame {
+  border: 2px solid #ff4d00;
+  border-radius: 8px;
+}
+
+.product-frame-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  padding: 10px 19px;
+  border-radius: 32px;
+  transform: translateY(-50%);
+}
+
+.product-frame-list {
+  display: flex;
+  list-style: none;
+}
+
+.product-frame-item {
+  flex-basis: 20%;
+  border: 1px solid #eee;
+}
+.product-item {
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  transition: 0.3s all linear;
+}
+
+.product-item img {
+  width: 100%;
+  transition: 0.2s all linear;
+}
+
+.product-item:hover img {
+  transform: translateY(-10px);
+}
+
+.product-item-name {
+  font-size: 16px;
+  line-height: 2;
+  font-family: auto;
+  transition: 0.1s all linear;
+}
+.product-item:hover .product-item-name {
+  color: #288ad6;
+}
+.product-item-price {
+}
+.product-item-price strong {
+  color: #e10c00;
+  font-size: 14px;
+}
+
+.product-item-price span {
+  font-size: 13px;
+  text-decoration: line-through;
+}
+.product-item-rating {
+  display: flex;
+}
+.product-item-rating i {
+  color: orange;
+  font-size: 13px;
+}
+.product-item-rating span {
+  line-height: 1;
+  font-size: 12px;
+  color: #999;
+  margin-left: 10px;
+  margin-bottom: -1px;
+}
+
+.new-product,
+.cheap-product {
+  position: absolute;
+  top: 200px;
+  left: 15px;
+  width: 80px;
+  background-color: #1191f8;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 2.1;
+  text-align: center;
+  padding: 0 3px;
+}
+.cheap-product {
+  background-color: #3fb846;
+}
+
+.discount-product {
+  position: absolute;
+  top: 200px;
+  left: 15px;
+  background-image: linear-gradient(90deg, #ff9c00 0%, #ec1f1f 100%);
+  padding: 0 10px;
+  border-radius: 38px;
+  padding-left: 0;
+  overflow: hidden;
+  font-size: 13px;
+  color: white;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.discount-product i {
+  padding: 4px 6px;
+  border-radius: 50%;
+  background: red;
+  font-size: 12px;
+  color: white;
+}
+
+.btn-add {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: #888;
+  transition: 0.2s all linear;
+}
+.btn-add .btn-add-title {
+  z-index: 5;
+  position: absolute;
+  top: -35px;
+  left: 0px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  color: white;
+  line-height: 1.6;
+  border-radius: 4px;
+  transform: translateX(calc(-50% + 18px));
+  display: none;
+  transition: 0.2s all linear;
+}
+
+.btn-add:hover .btn-add-title {
+  display: block;
+}
+
+.btn-add .btn-add-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: calc(50% + -6px);
+  border: 4px solid transparent;
+  border-top: 4px solid rgba(0, 0, 0, 0.6);
+}
+
+.btn-add:hover {
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+
+.product-frame-extend {
+  color: #888;
+  background-color: #eee;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  padding: 3px 0;
+  border-radius: 32px;
+  font-weight: bold;
+  transform: translateY(50%);
+}
+.product-frame-extend:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.footer-home {
+  margin-top: 100px;
+  color: white;
+  background-color: #0bd9a9;
+}
+
+.footer-home .grid {
+  display: flex;
+}
+
+.service-block {
+  flex-basis: 25%;
+  margin: 15px 0;
+  border-left: 1px solid white;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.service-block:first-child {
+  border: none;
+  padding: 0;
+}
+
+.service-block-name {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.service-block-name i {
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.4s all;
+}
+
+.service-block-name:hover i {
+  transform: scale(1.4);
+}
+.service-block span {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+}

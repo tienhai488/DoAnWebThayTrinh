@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="Vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie = edge" />
+    <title>Giỏ Hàng - Thế Giới Điện Thoại</title>
+    <link rel="stylesheet" href="css/giohang_dangnhap.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/headingfooter.css" />
+    <script src="js/common.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="grid mt-140">
+      <script>
+        addHeader();
+      </script>
+      <div class="page-gh">
+        <table class="listsanpham">
+          <tbody>
+            <tr>
+              <th>STT</th>
+              <th>Sản Phẩm</th>
+              <th>Giá</th>
+              <th>Số Lượng</th>
+              <th>Thành Tiền</th>
+              <th>Thời Gian</th>
+              <th>Xóa</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="noPadding imgHide">
+                <a
+                  target="_blank"
+                  href="https://tienhai488.github.io/DoAnWeb1/chitietsanpham.html?Huawei-Nova-2i"
+                  title="Xem Chi Tiết"
+                >
+                  Huawei Nova 2i
+                  <img
+                    src="https://cdn.tgdd.vn/Products/Images/42/157031/samsung-galaxy-a6-2018-2-600x600.jpg"
+                  />
+                </a>
+              </td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td class="soluong">
+                <button onclick="giamSoLuong ('Hua3')">
+                  <i class="fa fa-minus"></i>
+                </button>
+                <input
+                  size="1"
+                  onchange="capNhatSoLuongFromInput (this, 'Hua3')"
+                  value="1"
+                />
+                <button onclick="tangSoLuong ('Hua3')">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td style="text-align: center">10/15/2022, 2:15:43 PM</td>
+              <td class="noPadding">
+                <i class="fa fa-trash" onclick="xoaSanPhamTrongGioHang(0)"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="noPadding imgHide">
+                <a
+                  target="_blank"
+                  href="https://tienhai488.github.io/DoAnWeb1/chitietsanpham.html?Huawei-Nova-2i"
+                  title="Xem Chi Tiết"
+                >
+                  Huawei Nova 2i
+                  <img
+                    src="https://cdn.tgdd.vn/Products/Images/42/157031/samsung-galaxy-a6-2018-2-600x600.jpg"
+                  />
+                </a>
+              </td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td class="soluong">
+                <button onclick="giamSoLuong ('Hua3')">
+                  <i class="fa fa-minus"></i>
+                </button>
+                <input
+                  size="1"
+                  onchange="capNhatSoLuongFromInput (this, 'Hua3')"
+                  value="1"
+                />
+                <button onclick="tangSoLuong ('Hua3')">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td style="text-align: center">10/15/2022, 2:15:43 PM</td>
+              <td class="noPadding">
+                <i class="fa fa-trash" onclick="xoaSanPhamTrongGioHang(0)"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="noPadding imgHide">
+                <a
+                  target="_blank"
+                  href="https://tienhai488.github.io/DoAnWeb1/chitietsanpham.html?Huawei-Nova-2i"
+                  title="Xem Chi Tiết"
+                >
+                  Huawei Nova 2i
+                  <img
+                    src="https://cdn.tgdd.vn/Products/Images/42/157031/samsung-galaxy-a6-2018-2-600x600.jpg"
+                  />
+                </a>
+              </td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td class="soluong">
+                <button onclick="giamSoLuong ('Hua3')">
+                  <i class="fa fa-minus"></i>
+                </button>
+                <input
+                  size="1"
+                  onchange="capNhatSoLuongFromInput (this, 'Hua3')"
+                  value="19999"
+                />
+                <button onclick="tangSoLuong ('Hua3')">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td style="text-align: center">10/15/2022, 2:15:43 PM</td>
+              <td class="noPadding">
+                <i class="fa fa-trash" onclick="xoaSanPhamTrongGioHang(0)"></i>
+              </td>
+            </tr>
+            <tr style="font-weight: bold; text-align: center">
+              <td colspan="4">TỔNG TIỀN</td>
+              <td class="alignRight">3.990.000 ₫</td>
+              <td class="thanhtoan" onclick="thanhToan()">Thanh Toán</td>
+              <td class="xoahet" onclick="xoaHet()">Xóa Hết</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      addFooter();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+.body-tintuc{
+	margin: 70px 50px 50px 90px;
+	width: 80%
+}
+.tintuc-info{
+	height: 170px;
+	border-bottom: 1px solid #FCF;
+	margin-top: 5px;
+
+}
+.tintuc-info img{
+	border: 1px solid gray;
+	float: left;
+	margin-right: 10px;
+	padding:5px;
+	border-radius: 5px;
+	height:148px;
+	width:224px;
+}
+.tintuc-info a:hover{
+	color: #666;
+}
+.tintuc-info h5{
+	font-weight: 100;
+	font-style: italic;
+	color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+  
+html{
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	line-height: 1.6rem;
+	scroll-behavior: smooth;
+}
+  
+.grid {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+  

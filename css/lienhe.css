@@ -1,0 +1,65 @@
+html {
+  line-height: 2;
+}
+.lienhe-header {
+  background-color: pink;
+  height: 40px;
+  padding-left: 10px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.lienhe-info {
+  margin: 20px auto 0;
+  display: inline-block;
+  width: 100%;
+}
+.lienhe-info p {
+  margin-bottom: 10px;
+}
+.info-left {
+  float: left;
+  width: 48%;
+}
+.info-right {
+  border: 1px solid gray;
+  float: right;
+  width: 48%;
+}
+.form-thong-tin {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.guithongtin {
+  width: 40%;
+}
+.thongtinthanhvien {
+  width: 48%;
+}
+table {
+  margin-top: 10px;
+  height: 20px;
+}
+table input {
+  padding: 5px;
+}
+table button {
+  padding: 5px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #0c9;
+}
+.thongtinthanhvien table {
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.thongtinthanhvien table td,
+th {
+  border: 1px solid #0c9;
+  height: 30px;
+  padding: 3px;
+  text-align: center;
+}
+.thongtinthanhvien tr:nth-of-type(even) {
+  background-color: aliceblue;
+}

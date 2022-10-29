@@ -1,122 +1,131 @@
-.grid{
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
-.listsanpham tr td:first-child, .listSanPham tr th {
-	text-align: center;
+.listsanpham tr td:first-child,
+.listSanPham tr th {
+  text-align: center;
 }
 .listsanpham {
-	margin: 50px auto;
-    border-collapse: collapse;
-    width: 100%;
+  margin: 50px auto;
+  border-collapse: collapse;
+  width: 100%;
 }
 .listsanpham td {
-    border: 1px solid gray;
+  border: 1px solid gray;
 }
 .listsanpham th {
-    border: 1px solid gray;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 57px;
-    padding-right: 57px;
-    background-color:darkseagreen;
-    color: white;
+  border: 1px solid gray;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 57px;
+  padding-right: 57px;
+  background-color: darkseagreen;
+  color: white;
 }
-.listsanpham tr:not(:last-child):hover {background-color: #e5e2e2;}
+.listsanpham tr:not(:last-child):hover {
+  background-color: #e5e2e2;
+}
 /* link sản phẩm */
 .noPadding {
-    padding: 0 0 0 10px;
-    line-height: 2.5em;
+  padding: 0 0 0 10px;
+  line-height: 2.5em;
 }
 .listSanPham td a {
-    display: block;
-    position: relative;
-    padding: 5px 0;
+  display: block;
+  position: relative;
+  padding: 5px 0;
 }
 .listSanPham td a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .imgHide img {
-    position: absolute;
-    right: -130px;
-    width: 150px;
-    height: 0;
-    border-radius: 10px;
-    transition-duration: .1s;
+  position: absolute;
+  right: -130px;
+  width: 150px;
+  height: 0;
+  border-radius: 10px;
+  transition-duration: 0.1s;
 }
 .imgHide a:hover img {
-    height: 150px;
+  height: 150px;
 }
 /* Số lượng */
 .listsanpham .soluong {
-    text-align: center;
+  text-align: center;
 }
 .listsanpham .soluong button {
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: transparent; 
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
 }
 .listsanpham .soluong button:hover {
-    background-color: #4CAF50; 
+  background-color: #4caf50;
 }
 .listsanpham .soluong input {
-    border: none;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    width: 5em;
-    height: 2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  width: 5em;
+  height: 2em;
 }
 /* Giá tiền canh lề phải */
 .alignRight {
-    text-align: right;
-    padding-right: 30px;  
+  text-align: right;
+  padding-right: 30px;
 }
 /* Nút thanh toán */
 .listsanpham .thanhtoan {
-    font-size: 1.5em;
-    padding: 15px 15px;
-    font-weight: bold;
-    background-color: rgb(197, 223, 199);
-    cursor: pointer;
-    transition-duration: .2s;
+  font-size: 1.5em;
+  padding: 15px 15px;
+  font-weight: bold;
+  background-color: rgb(197, 223, 199);
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
 .listsanpham .thanhtoan:hover {
-    background-color: #4CAF50; 
+  background-color: #4caf50;
 }
 /* Nút xóa */
-.fa-trash::before{
-    content: "\f1f8"
+.fa-trash::before {
+  content: "\f1f8";
 }
 .fa-trash {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    color: #999;
-    cursor: pointer;
-    transition-duration: .2s;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #999;
+  cursor: pointer;
+  transition-duration: 0.2s;
 }
 .fa-trash:hover {
-    color: red;
-    transform: scale(1.5)
+  color: red;
+  transform: scale(1.5);
 }
 .xoahet {
-    border: none;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
 }
 .xoahet:hover {
-    background-color: rgb(224, 65, 65);
+  background-color: rgb(224, 65, 65);
 }
-.listsanpham tr:last-child{
-    background-color: rgb(188, 183, 183);
+.listsanpham tr:last-child {
+  background-color: rgb(188, 183, 183);
 }
 /* những tr chẵn sẽ có màu khác */
-.listSanPham tr:nth-of-type(even) {background-color: #f2f2f2;}
+.listSanPham tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+.link-cart {
+  text-decoration: none;
+}

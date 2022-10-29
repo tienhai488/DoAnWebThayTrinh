@@ -7,13 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/base.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container-form active">
       <div class="form">
         <div class="button-box">
           <div class="bar-button"></div>
@@ -27,19 +28,33 @@
         </div>
 
         <div class="group-input group1">
-          <input class="input" type="text" placeholder="User Name" />
-          <input class="input" type="password" placeholder="Enter Password" />
+          <input class="input_form" type="text" placeholder="User Name" />
+          <input
+            class="input_form"
+            type="password"
+            placeholder="Enter Password"
+          />
           <input class="check" type="checkbox" />
           <span>Remember Password</span>
-          <button>Log in</button>
+          <div class="group-btn">
+            <button onclick="offForm()">Exit</button>
+            <button>Log in</button>
+          </div>
         </div>
         <div class="group-input group2">
-          <input class="input" type="text" placeholder="User Name" />
-          <input class="input" type="password" placeholder="Email Id" />
-          <input class="input" type="password" placeholder="Enter Password" />
+          <input class="input_form" type="text" placeholder="User Name" />
+          <input class="input_form" type="password" placeholder="Email Id" />
+          <input
+            class="input_form"
+            type="password"
+            placeholder="Enter Password"
+          />
           <input class="check" type="checkbox" />
           <span>I agree to the Terms & Condition </span>
-          <button>Register</button>
+          <div class="group-btn">
+            <button onclick="offForm()">Exit</button>
+            <button>Register</button>
+          </div>
         </div>
       </div>
     </div>

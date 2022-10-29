@@ -1,10 +1,40 @@
-.container {
+.container-form {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./img/img_index4/login-reg-img/banner.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  animation: fadeIn 0.4s linear;
+}
+.container-form.active {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .form {
@@ -14,6 +44,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  animation: scaleIn 0.4s linear;
 }
 .button-box {
   position: relative;
@@ -35,6 +66,14 @@
   cursor: pointer;
   z-index: 3;
   transition: 0.6s all;
+}
+.group-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.group-btn button {
+  width: 20px;
 }
 .btn-login {
   color: white;
@@ -85,7 +124,7 @@
   cursor: pointer;
   transform: translateY(2px);
 }
-.input {
+.input_form {
   width: 100%;
   padding-bottom: 10px;
   margin-bottom: 25px;
@@ -102,7 +141,7 @@
   display: block;
   background: linear-gradient(to right, #3e8db4, #80328f);
   margin: 30px auto;
-  width: 80%;
+  width: 45%;
   height: 35px;
   border: none;
   border-radius: 30px;

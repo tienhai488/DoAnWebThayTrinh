@@ -23,6 +23,13 @@
   transition: 0.3s all;
   list-style: none;
 }
+.header1 .active a {
+  color: rgb(164, 13, 13);
+}
+
+.header1 .active a::after {
+  width: 100%;
+}
 .header1 li a {
   color: gray;
   text-decoration: none;
@@ -54,7 +61,7 @@
   display: block;
   height: 3px;
   width: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: 0.6s all;
   border-radius: 1px;
 }
@@ -117,8 +124,12 @@
 
 #sub1 a {
   font-weight: 400;
-  letter-spacing: 0.7px;
   color: #555555;
+  font-size: 14px;
+  display: block;
+  min-width: 140px;
+  padding: 0 8px;
+  line-height: 45px;
 }
 
 .cart {
@@ -141,16 +152,10 @@
   color: #808080;
 }
 
-#sub1 {
-  padding: 0px 9px;
-}
 #sub1:hover {
   background-color: #888;
   color: #eee;
-  padding: 0px 9px;
-  line-height: 45px;
-  transition: 0.9s all;
-  font-weight: bold;
+  transition: 0.6s all;
 }
 #sub1:hover a {
   color: white;
@@ -160,9 +165,9 @@
   background-color: #cfcccc;
   position: absolute;
   line-height: 45px;
-  margin-left: -60px;
   border-radius: 5%;
   overflow: hidden;
+  transform: translateX(-35%);
 }
 
 .user i {
@@ -178,11 +183,9 @@
 }
 
 .input {
-  position: relative;
   border: 1px solid black;
   height: 45px;
   border-radius: 30px;
-  overflow: hidden;
   display: flex;
   align-items: center;
 }
@@ -198,13 +201,20 @@
 }
 
 .input i {
-  line-height: 43px;
-  padding: 0px 30px;
+  line-height: 44px;
+  padding: 0px 31px;
   background: rgb(79 216 165);
+  font-size: 16px;
+  transform: translate(0px, 0px);
+  border-radius: 32px;
+  border-bottom-left-radius: unset;
+  border-top-left-radius: unset;
+  transition: 0.4s all;
 }
 
 .input i:hover {
-  color: red;
+  opacity: 0.6;
+  color: black;
 }
 
 .sub {
@@ -219,9 +229,8 @@
   display: block;
 }
 .sub li {
-  display: block;
-  min-width: 100%;
   background-color: #eee;
+  line-height: initial;
 }
 
 .header3 {

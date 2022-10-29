@@ -119,6 +119,7 @@ const addFooter = () => {
    </div>
    `);
 };
+
 const addHeader = () => {
   document.write(`
    <div class="header">
@@ -176,11 +177,11 @@ const addHeader = () => {
                <a href="" >Trang người dùng</a>
                </li>   
                <li id="sub1">
-               <a href="" >Đăng xuất</a>
+               <a href="#"  onclick="onForm()" >Đăng nhập</a>
                </li>
                </ul></a>
             </li>
-            <li id="cart" class="cart"><a href=""><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
+            <li id="cart" class="cart"><a href="giohang_dangnhap.html"><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a></li>
             </li>
          </ul>
       </div>
@@ -198,3 +199,103 @@ const addHeader = () => {
    </div>
    `);
 };
+
+const addForm = () => {
+  document.write(`
+    <div class="container-form" onclick="onOutside(event)" >
+    <div class="form">
+      <div class="button-box">
+        <div class="bar-button"></div>
+        <button class="btn-login" onclick="onRegister()">Log In</button>
+        <button class="btn-register" onclick="onLogin()">Register</button>
+      </div>
+      <div class="icons">
+        <i class="fa-brands fa-facebook-f"></i
+        ><i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-google"></i>
+      </div>
+ 
+      <div class="group-input group1">
+        <input class="input_form" type="text" placeholder="User Name" />
+        <input
+          class="input_form"
+          type="password"
+          placeholder="Enter Password"
+        />
+        <input class="check" type="checkbox" />
+        <span>Remember Password</span>
+        <div class="group-btn">
+             <button onclick="offForm()">Exit</button>
+             <button >Log in</button>
+           </div>
+      </div>
+      <div class="group-input group2">
+        <input class="input_form" type="text" placeholder="User Name" />
+        <input class="input_form" type="password" placeholder="Email Id" />
+        <input
+          class="input_form"
+          type="password"
+          placeholder="Enter Password"
+        />
+        <input class="check" type="checkbox" />
+        <span>I agree to the Terms & Condition </span>
+        <div class="group-btn">
+             <button onclick="offForm()">Exit</button>
+             <button >Register</button>
+           </div>
+      </div>
+    </div>
+  </div>`);
+};
+
+const onOutside = (event) => {
+  const ignoreClickOnMeElement = document.querySelector(".form");
+  const isClickInsideElement = ignoreClickOnMeElement.contains(event.target);
+  if (!isClickInsideElement) {
+    offForm();
+  }
+};
+
+const onForm = () => {
+  const form = document.querySelector(".container-form");
+  form.classList.add("active");
+};
+
+const offForm = () => {
+  const form = document.querySelector(".container-form");
+  form.classList.remove("active");
+};
+
+const onLogin = () => {
+  const gr1 = document.querySelector(".group1");
+  const gr2 = document.querySelector(".group2");
+  const x = document.querySelector(".btn-register");
+  const y = document.querySelector(".btn-login");
+  const bar = document.querySelector(".bar-button");
+  bar.style.left = "90px";
+  gr1.style.left = "-200px";
+  gr2.style.right = "50%";
+  x.style.color = "white";
+  y.style.color = "black";
+};
+
+const onRegister = () => {
+  const gr1 = document.querySelector(".group1");
+  const gr2 = document.querySelector(".group2");
+  const x = document.querySelector(".btn-register");
+  const y = document.querySelector(".btn-login");
+  const bar = document.querySelector(".bar-button");
+  x.style.color = "black";
+  y.style.color = "white";
+  bar.style.left = "0px";
+  gr1.style.left = "50%";
+  gr2.style.right = "-200px";
+};
+
+// const handleActive = () => {
+//   const listItem = document.querySelectorAll(".header-item");
+//   console.log(listItem);
+//   listItem.forEach((item) => {
+//     item.onclick = () => item.classList.add("active");
+//   });
+// };

@@ -126,7 +126,7 @@ const addHeader = () => {
       <div class="header1">
          <ul>
             <li>
-               <a href="home.html">
+               <a href="index.html">
                <i class="fa-solid fa-house"></i> 
                Trang chủ
                </a>
@@ -165,7 +165,7 @@ const addHeader = () => {
       </div>
       <div class="header2">
          <ul>
-            <li><a href=""> <img src="img/logo.jpg" alt=""> </a></li>
+            <li><a href="index.html"> <img src="img/logo.jpg" alt=""> </a></li>
             <li class="input"><input placeholder="Bạn muốn tìm gì? "><a href=""><i
                class="fa-solid fa-magnifying-glass"></i></a>
             <li id="user1" class="user">

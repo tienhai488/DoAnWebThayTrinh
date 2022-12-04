@@ -307,8 +307,9 @@ const onForm = () => {
 
 
    document.querySelector('.login').onclick = ()=>{
+      let arr = JSON.parse(localStorage.getItem('TaiKhoan'));
         const name = user_name1.value.trim()
-        pass = password1.value.trim()
+        const pass = password1.value.trim()
         let checkLogin = true
         if(name.length <= 0){
           console.log("UserName khong duoc de trong!")
@@ -321,7 +322,25 @@ const onForm = () => {
             console.log("Password it nhat 8 ki tu!")
             password1.value = ""
             checkLogin = false
+         }
+         if(checkLogin){
+            let checkAccount = false
+         arr.forEach(item=>{
+            if(item.user_name==name && item.password == pass){
+               checkAccount = true
+            }
+         })
+         if(checkAccount){
+            obj = {
+               user_name: name, password: pass
+            }
+            localStorage.setItem("AccountLogin",JSON.stringify(obj))
+         }else{
+            document.querySelector(".group1 .error_password").innerHTML = "Password khong dung!"
+            password1.value = ""
+           checkLogin = false
         }
+         }
 
         if(checkLogin){
             const arr = JSON.parse(localStorage.getItem("TaiKhoan"))
@@ -379,8 +398,8 @@ const onForm = () => {
          obj = {
             user_name: name, password: pass, email: email_value
          }
-         localStorage.setItem("TaiKhoan",JSON.stringify([...arr,obj]))
          localStorage.setItem("AccountLogin",JSON.stringify(obj))
+         localStorage.setItem("TaiKhoan",JSON.stringify([...arr,obj]))
          alert("Ban da dang nhap bang tai khoan moi!")
          offForm()
          location.reload()

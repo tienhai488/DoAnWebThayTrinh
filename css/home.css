@@ -141,6 +141,7 @@
 .product-frame-item {
   flex-basis: 20%;
   border: 1px solid #eee;
+  position: relative;
 }
 .product-item {
   padding: 15px;

@@ -14,12 +14,15 @@
     <link rel="stylesheet" href="css/form.css">
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/thongbao.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <title>Chi tiết sản phẩm</title>
   </head>
   <body>
     <script>
       addForm();
     </script>
+    <div id="toast"></div>
    <div class="grid mt-140">
          <script>
          addHeader();
@@ -215,7 +218,7 @@
           * SẢN PHẨM MỚI *
         </div>
         <ul class="product-frame-list">
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/samsung-galaxy-j4-plus-pink-400x400.jpg"
@@ -240,13 +243,13 @@
                 <i class="fa-solid fa-bolt"></i>
                 Giảm 500.000₫
               </label>
-              <button class="btn-add">
+            </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/xiaomi-mi-8-lite-black-1-600x600.jpg"
@@ -271,13 +274,13 @@
                     <i class="fa-solid fa-bolt"></i>
                     Giảm 500.000₫
                   </label> -->
-              <button class="btn-add">
+                </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/oppo-f9-red-600x600.jpg"
@@ -302,13 +305,13 @@
                     <i class="fa-solid fa-bolt"></i>
                     Giảm 500.000₫
                   </label> -->
-              <button class="btn-add">
+                </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/nokia-51-plus-black-18thangbh-400x400.jpg"
@@ -333,13 +336,13 @@
                     <i class="fa-solid fa-bolt"></i>
                     Giảm 500.000₫
                   </label> -->
-              <button class="btn-add">
+                </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/samsung-galaxy-a8-plus-2018-gold-600x600.jpg"
@@ -364,13 +367,13 @@
                 <i class="fa-solid fa-bolt"></i>
                 Giảm 500.000₫
               </label>
-              <button class="btn-add">
+            </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/iphone-x-256gb-silver-400x400.jpg"
@@ -395,13 +398,13 @@
                 <i class="fa-solid fa-bolt"></i>
                 Giảm 500.000₫
               </label>
-              <button class="btn-add">
+            </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/oppo-a3s-32gb-600x600.jpg"
@@ -426,13 +429,13 @@
                     <i class="fa-solid fa-bolt"></i>
                     Giảm 500.000₫
                   </label> -->
-              <button class="btn-add">
+                </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/samsung-galaxy-j8-600x600-600x600.jpg"
@@ -457,13 +460,13 @@
                     <i class="fa-solid fa-bolt"></i>
                     Giảm 500.000₫
                   </label> -->
-              <button class="btn-add">
+                </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/ipad-wifi-32gb-2018-thumb-600x600.jpg"
@@ -488,13 +491,13 @@
                     <i class="fa-solid fa-bolt"></i>
                     Giảm 500.000₫
                   </label> -->
-              <button class="btn-add">
+                </a>
+              <button class="btn-add"  onclick="showSuccessToast();" >
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
-          <li class="product-frame-item">
+          <li class="product-frame-item" style="position: relative;">
             <a href="chitietsanpham.html" class="product-item">
               <img
                 src="img/products/iphone-7-plus-32gb-hh-600x600.jpg"
@@ -519,17 +522,19 @@
                 <i class="fa-solid fa-bolt"></i>
                 Giảm 500.000₫
               </label>
-              <button class="btn-add">
+            </a>
+              <button class="btn-add"  onclick="showSuccessToast();">
                 +
                 <label class="btn-add-title">Thêm vào giỏ </label>
               </button>
-            </a>
           </li>
         </ul>
         <a href="" class="product-frame-extend">Xem thêm 39 sản phẩm</a>
       </div>
     </div>
     <script>addFooter();</script>
+    <script src="js/cart.js"></script>
+    <script src="js/toast.js"></script>
     <script>
       let slideIndex = 1;
       showSlides(slideIndex);
@@ -561,6 +566,12 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
       }
+    
+    
+      
+     
+
+
     </script>
   </body>
 </html>

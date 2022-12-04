@@ -39,7 +39,7 @@
 
 .form {
   width: 350px;
-  height: 450px;
+  height: 520px;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -148,4 +148,9 @@
   cursor: pointer;
   color: white;
   font-size: 15px;
+}
+.error {
+  transform: translateY(-80%);
+    color: red;
+    display: block;
 }

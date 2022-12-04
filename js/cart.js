@@ -1,9 +1,11 @@
 const btns = document.querySelectorAll(".btn-add")
 
 btns.forEach((item,index)=>{
+  const account = JSON.parse(localStorage.getItem("AccountLogin"))
     item.onclick = ()=>{
 
-        parent = item.parentElement
+        if(account!=null){
+          parent = item.parentElement
         let nameProduct = parent.querySelector('h3').innerHTML
         let priceProduct = parent.querySelector('.product-item-price strong').innerHTML
 
@@ -21,6 +23,15 @@ btns.forEach((item,index)=>{
         });
 
         addData(nameProduct,result)
+        }else {
+          toast({
+            title: "Thất bại!",
+            message: `Bạn chưa đăng nhập tài khoản!`,
+            type: "danger",
+            duration: 1000
+          });
+          onForm()
+        }
     }
 })
 

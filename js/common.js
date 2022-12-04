@@ -1,3 +1,7 @@
+if(JSON.stringify(localStorage.getItem("TaiKhoan"))==null){
+   localStorage.setItem('TaiKhoan',JSON.stringify([{user_name:"tienhai",password:"tienhai123",email:"tienhai@gmail.com"}]))
+}
+
 const goToTop = () => {
   document.documentElement.scrollTop = 0;
 };
@@ -120,7 +124,13 @@ const addFooter = () => {
    `);
 };
 
+const checkStatusLogin = () => {
+   const account = JSON.parse(localStorage.getItem("AccountLogin"))
+   return account != null;
+}
 const addHeader = () => {
+   const account = JSON.parse(localStorage.getItem("AccountLogin"))
+   
   document.write(`
    <div class="header">
       <div class="header1">
@@ -171,13 +181,13 @@ const addHeader = () => {
             <li id="user1" class="user">
                <a href="" class="acount">
                   <i class="fa-solid fa-user" id="user2"></i>
-                  Tài khoản
+                  ${ account==null ? "Tai Khoan" : account.user_name }
                   <ul class="sub">
                      <li id="sub1">
                <a href="" >Trang người dùng</a>
                </li>   
                <li id="sub1">
-               <a href="#"  onclick="onForm()" >Đăng nhập</a>
+               ${account==null ? `<a href="#"  onclick="onForm()" > Dang nhap </a>` : `<a href="#"  onclick="onLogout()" >Dang xuat</a>`}
                </li>
                </ul></a>
             </li>
@@ -200,6 +210,14 @@ const addHeader = () => {
    `);
 };
 
+const onLogout = ()=>{
+   const check = confirm("Ban co chac chan muon thoat?")
+   if(check){
+      localStorage.setItem("AccountLogin",JSON.stringify(null))
+   location.reload()
+   }
+}
+
 const addForm = () => {
   document.write(`
     <div class="container-form" onclick="onOutside(event)" >
@@ -216,32 +234,38 @@ const addForm = () => {
       </div>
  
       <div class="group-input group1">
-        <input class="input_form" type="text" placeholder="User Name" />
+        <input class="input_form user_name" type="text" placeholder="User Name" />
+        <span class="error error_user_name"></span>
         <input
-          class="input_form"
+          class="input_form password"
           type="password"
           placeholder="Enter Password"
         />
+        <span class="error error_password"></span>
         <input class="check" type="checkbox" />
         <span>Remember Password</span>
         <div class="group-btn">
              <button onclick="offForm()">Exit</button>
-             <button >Log in</button>
+             <button class="login">Log in</button>
            </div>
       </div>
+
       <div class="group-input group2">
-        <input class="input_form" type="text" placeholder="User Name" />
-        <input class="input_form" type="password" placeholder="Email Id" />
+        <input class="input_form user_name" type="text" placeholder="User Name" />
+        <span class="error error_user_name"></span>
+        <input class="input_form email"  type="email" placeholder="Email Id" />
+        <span class="error error_email"></span>
         <input
-          class="input_form"
+          class="input_form password"
           type="password"
           placeholder="Enter Password"
         />
+        <span class="error error_password"></span>
         <input class="check" type="checkbox" />
         <span>I agree to the Terms & Condition </span>
         <div class="group-btn">
              <button onclick="offForm()">Exit</button>
-             <button >Register</button>
+             <button class="rgt" >Register</button>
            </div>
       </div>
     </div>
@@ -254,19 +278,127 @@ const onOutside = (event) => {
   if (!isClickInsideElement) {
     offForm();
   }
+
 };
+
+const resetForm = ()=>{
+   document.querySelector(".group1 .user_name").value = "";
+   document.querySelector(".group1 .password").value = "";
+   document.querySelector(".group2 .user_name").value = "";
+   document.querySelector(".group2 .password").value = "";
+   document.querySelector(".group2 .email").value = "";
+
+   const errs = document.querySelectorAll(".error")
+   if(errs!=null){
+      errs.forEach(item=>item.innerHTML = "")
+   }
+}
 
 const onForm = () => {
   const form = document.querySelector(".container-form");
   form.classList.add("active");
+
+  const user_name1 = document.querySelector(".group1 .user_name")
+   const password1 = document.querySelector(".group1 .password")
+
+   const user_name2 = document.querySelector(".group2 .user_name")
+   const password2 = document.querySelector(".group2 .password")
+   const email = document.querySelector(".group2 .email")
+
+
+   document.querySelector('.login').onclick = ()=>{
+        const name = user_name1.value.trim()
+        pass = password1.value.trim()
+        let checkLogin = true
+        if(name.length <= 0){
+          console.log("UserName khong duoc de trong!")
+          document.querySelector(".group1 .error_user_name").innerHTML = "UserName khong duoc de trong!"
+          checkLogin = false
+         }
+         
+         if(pass.length < 8){
+            document.querySelector(".group1 .error_password").innerHTML = "Password it nhat 8 ki tu!"
+            console.log("Password it nhat 8 ki tu!")
+            password1.value = ""
+            checkLogin = false
+        }
+
+        if(checkLogin){
+            const arr = JSON.parse(localStorage.getItem("TaiKhoan"))
+            arr.forEach(item=>{
+               if(item.user_name==name && item.password == pass) {
+                  localStorage.setItem("AccountLogin",JSON.stringify(item))
+                  offForm();
+                  alert("Ban da dang nhap thanh cong!")
+                  location.reload();
+               }
+            })
+        }
+
+      }
+
+      document.querySelector('.rgt').onclick = ()=>{
+         let arr = JSON.parse(localStorage.getItem('TaiKhoan'));
+        let name = user_name2.value.trim()
+        let pass = password2.value.trim()
+        let email_value = email.value.trim()
+
+        let checkRegister = true;
+        if(name.length <= 0){
+          console.log("UserName khong duoc de trong!")
+          document.querySelector(".group2 .error_user_name").innerHTML = "UserName khong duoc de trong!"
+          checkRegister = false;
+         }
+         let checkTrung = false;
+         console.log(arr);
+         arr.forEach(item=>{
+            if(item.user_name==name){
+               checkTrung = true;
+               checkRegister= false;
+            }
+         })
+         if(checkTrung){
+            document.querySelector(".group2 .error_user_name").innerHTML = "UserName da ton tai!"
+         }
+         if(email_value.length <= 0){
+            console.log("Email khong duoc de trong!")
+            document.querySelector(".group2 .error_email").innerHTML = "Email khong duoc de trong!"
+            checkRegister = false;
+         }else if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email_value))){
+            document.querySelector(".group2 .error_email").innerHTML = "Email khong hop le!"
+            checkRegister = false;
+         }
+         if(pass.length < 8){
+            document.querySelector(".group2 .error_password").innerHTML = "Password it nhat 8 ki tu!"
+            console.log("Password it nhat 8 ki tu!")
+            password2.value = ""
+            checkRegister = false;
+        }
+
+        if(checkRegister){
+         obj = {
+            user_name: name, password: pass, email: email_value
+         }
+         localStorage.setItem("TaiKhoan",JSON.stringify([...arr,obj]))
+         localStorage.setItem("AccountLogin",JSON.stringify(obj))
+         alert("Ban da dang nhap bang tai khoan moi!")
+         offForm()
+         location.reload()
+        }
+      }
+
+
 };
 
+
 const offForm = () => {
+   resetForm()
   const form = document.querySelector(".container-form");
   form.classList.remove("active");
 };
 
 const onLogin = () => {
+   resetForm()
   const gr1 = document.querySelector(".group1");
   const gr2 = document.querySelector(".group2");
   const x = document.querySelector(".btn-register");
@@ -280,6 +412,7 @@ const onLogin = () => {
 };
 
 const onRegister = () => {
+   resetForm()
   const gr1 = document.querySelector(".group1");
   const gr2 = document.querySelector(".group2");
   const x = document.querySelector(".btn-register");
@@ -301,4 +434,7 @@ const onRegister = () => {
 // };
 
 
+
+
+      
 

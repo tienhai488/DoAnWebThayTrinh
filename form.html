@@ -23,37 +23,46 @@
         </div>
         <div class="icons">
           <i class="fa-brands fa-facebook-f"></i
-          ><i class="fa-brands fa-twitter"></i>
+            ><i class="fa-brands fa-twitter"></i>
           <i class="fa-brands fa-google"></i>
         </div>
-
+        
+        
         <div class="group-input group1">
-          <input class="input_form" type="text" placeholder="User Name" />
+          <input class="input_form user_name" type="text" placeholder="User Name" />
+          <span class="error error_user_name"></span>
           <input
-            class="input_form"
-            type="password"
-            placeholder="Enter Password"
+          class="input_form password"
+          type="password"
+          placeholder="Enter Password"
           />
+          <span class="error error_password"></span>
+          
           <input class="check" type="checkbox" />
           <span>Remember Password</span>
           <div class="group-btn">
             <button onclick="offForm()">Exit</button>
-            <button>Log in</button>
+            <button onclick="checkLogin()" >Log in</button>
           </div>
         </div>
+        
+        
         <div class="group-input group2">
-          <input class="input_form" type="text" placeholder="User Name" />
-          <input class="input_form" type="password" placeholder="Email Id" />
+          <input class="input_form user_name" type="text" placeholder="User Name" />
+          <span class="error error_user_name"></span>
+          <input class="input_form email" type="email" placeholder="Email Id" />
+          <span class="error error_email"></span>
           <input
-            class="input_form"
-            type="password"
-            placeholder="Enter Password"
+          class="input_form password"
+          type="password"
+          placeholder="Enter Password"
           />
+          <span class="error error_password"></span>
           <input class="check" type="checkbox" />
           <span>I agree to the Terms & Condition </span>
           <div class="group-btn">
             <button onclick="offForm()">Exit</button>
-            <button>Register</button>
+            <button onclick="checkRegister()" type="submit">Register</button>
           </div>
         </div>
       </div>
@@ -71,6 +80,7 @@
         gr2.style.right = "50%";
         x.style.color = "white";
         y.style.color = "black";
+        
       };
       y.onclick = function () {
         x.style.color = "black";
@@ -79,6 +89,11 @@
         gr1.style.left = "50%";
         gr2.style.right = "-200px";
       };
+
+      
+      
+
     </script>
+    <script src="js/common.js"></script>
   </body>
 </html>

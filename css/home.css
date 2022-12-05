@@ -136,6 +136,7 @@
   display: flex;
   list-style: none;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-frame-item {
@@ -346,4 +347,32 @@
   margin-top: 12px;
   display: block;
   font-size: 14px;
+}
+
+.filterProduct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-filter-select {
+  color: white;
+  margin: 0 10px;
+  padding: 8px 12px;
+  background-color: #288ad6;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.btn-filter-select i {
+  font-size: 14px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.btn-filter-select:hover i {
+  color: red;
 }

@@ -176,7 +176,7 @@ const addHeader = () => {
       <div class="header2">
          <ul>
             <li><a href="index.html"> <img src="img/logo.jpg" alt=""> </a></li>
-            <li class="input"><input placeholder="Bạn muốn tìm gì? "><a href=""><i
+            <li class="input"><input spellcheck="false" class="input-search-header" placeholder="Bạn muốn tìm gì? "><a href="#" onclick="filterSearch()"><i
                class="fa-solid fa-magnifying-glass"></i></a>
             <li id="user1" class="user">
                <a href="" class="acount">
@@ -197,12 +197,12 @@ const addHeader = () => {
       </div>
       <div class="header3">
          <ul>
-            <li id="h3"><a href=""><b>Từ khóa:</b> </a></li>
-            <li class="h3_1"><a href="">Samsung</a></li>
-            <li class="h3_1"><a href="">Huawei</a></li>
-            <li class="h3_1"><a href="">Iphone</a></li>
-            <li class="h3_1"><a href="">Oppo</a></li>
-            <li class="h3_1"><a href="">Mobi</a></li>
+            <li id="h3"><a href="#"><b>Từ khóa:</b> </a></li>
+            <li class="h3_1"><a href="#" onclick="addFilter('company','Samsung')">Samsung</a></li>
+            <li class="h3_1"><a href="#" onclick="addFilter('company','Huawei')">Huawei</a></li>
+            <li class="h3_1"><a href="#" onclick="addFilter('company','Iphone')">Iphone</a></li>
+            <li class="h3_1"><a href="#" onclick="addFilter('company','Oppo')">Oppo</a></li>
+            <li class="h3_1"><a href="#" onclick="addFilter('company','Mobiistar')">Mobi</a></li>
          </ul>
       </div>
       <hr width="100%" noshade="noshade">
@@ -451,8 +451,6 @@ const onRegister = () => {
 //     item.onclick = () => item.classList.add("active");
 //   });
 // };
-
-
 
 
       

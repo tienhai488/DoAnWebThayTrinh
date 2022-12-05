@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thế giới di động</title>
+    
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/headingfooter.css" />
     <link rel="stylesheet" href="css/form.css" />
     <script src="js/common.js"></script>
+
     
     <link rel="stylesheet" href="css/thongbao.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -30,21 +32,21 @@
         </script>
         <img o src="img/banners/blackFriday.gif" alt="" style="width: 100%" />
         <div class="company-menu">
-          <a href=""><img src="img/company/Apple.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Coolpad.png" alt="" /></a>
-          <a href=""><img src="img/company/HTC.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Huawei.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Itel.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Mobell.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Mobiistar.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Motorola.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Nokia.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Oppo.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Philips.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Realme.png" alt="" /></a>
-          <a href=""><img src="img/company/Samsung.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Vivo.jpg" alt="" /></a>
-          <a href=""><img src="img/company/Xiaomi.png" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Iphone')"><img src="img/company/Apple.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Coolpad')"><img src="img/company/Coolpad.png" alt="" /></a>
+          <a href="#" onclick="addFilter('company','HTC')"><img src="img/company/HTC.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Huawei')"><img src="img/company/Huawei.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Itel')"><img src="img/company/Itel.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Mobell')"><img src="img/company/Mobell.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Mobiistar')"><img src="img/company/Mobiistar.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Motorola')"><img src="img/company/Motorola.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Nokia')"><img src="img/company/Nokia.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Oppo')"><img src="img/company/Oppo.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Philips')"><img src="img/company/Philips.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Realme')"><img src="img/company/Realme.png" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Samsung')"><img src="img/company/Samsung.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Vivo')"><img src="img/company/Vivo.jpg" alt="" /></a>
+          <a href="#" onclick="addFilter('company','Xiaomi')"><img src="img/company/Xiaomi.png" alt="" /></a>
         </div>
         <div class="list-filter">
           <div class="btn-filter btn-filter-price">
@@ -54,19 +56,19 @@
             </a>
             <ul class="menu-filter">
               <li class="menu-filter-item">
-                <a href="">Dưới 2 triệu</a>
+                <a href="#" onclick="addFilter('price',[0,2])">Dưới 2 triệu</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Từ 2 - 4 triệu</a>
+                <a href="#" onclick="addFilter('price',[2,4])">Từ 2 - 4 triệu</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Từ 4 - 7 triệu</a>
+                <a href="#" onclick="addFilter('price',[4,7])">Từ 4 - 7 triệu</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Từ 7 - 13 triệu</a>
+                <a href="#" onclick="addFilter('price',[7,13])">Từ 7 - 13 triệu</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Trên 13 triệu</a>
+                <a href="#" onclick="addFilter('price',[13,1000])">Trên 13 triệu</a>
               </li>
             </ul>
           </div>
@@ -74,19 +76,19 @@
             <a href="" class="btn-filter-link">
               Khuyến mãi
               <i class="fa-solid fa-angle-right icon-arrow-right"></i>
-            </a>
+            </a> 
             <ul class="menu-filter">
               <li class="menu-filter-item">
-                <a href="">Giảm giá</a>
+                <a href="#" onclick="addFilter('promo','giamgia')">Giảm giá</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Trả góp</a>
+                <a href="#" onclick="addFilter('promo','tragop')">Trả góp</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Giá rẻ online</a>
+                <a href="#" onclick="addFilter('promo','giareonline')">Giá rẻ online</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Mới ra mắt</a>
+                <a href="#" onclick="addFilter('promo','moiramat')">Mới ra mắt</a>
               </li>
             </ul>
           </div>
@@ -97,13 +99,13 @@
             </a>
             <ul class="menu-filter">
               <li class="menu-filter-item">
-                <a href="">Trên 2 sao</a>
+                <a href="#" onclick="addFilter('star',2)">Trên 2 sao</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Trên 3 sao</a>
+                <a href="#" onclick="addFilter('star',3)">Trên 3 sao</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Trên 4 sao</a>
+                <a href="#" onclick="addFilter('star',4)">Trên 4 sao</a>
               </li>
             </ul>
           </div>
@@ -114,21 +116,64 @@
             </a>
             <ul class="menu-filter">
               <li class="menu-filter-item">
-                <a href="">Giá tăng dần</a>
+                <a href="#" onclick="addFilter('sorted','tang')">Giá tăng dần</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Giá giảm dần</a>
+                <a href="#" onclick="addFilter('sorted','giam')">Giá giảm dần</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Từ A - Z</a>
+                <a href="#" onclick="addFilter('sorted','az')">Từ A - Z</a>
               </li>
               <li class="menu-filter-item">
-                <a href="">Từ Z - A</a>
+                <a href="#" onclick="addFilter('sorted','za')">Từ Z - A</a>
               </li>
             </ul>
           </div>
         </div>
-        <hr style="margin: 30px 0 60px 0; z-index: 1" />
+        <div class="filterProduct" style="text-align: center;margin-top:20px;">
+          <!-- <button class="btn-filter-select">Xóa bộ lọc</button>
+          <button class="btn-filter-select">Từ 7 - 13 triệu<i class="fa-solid fa-xmark"></i></button>
+          <button class="btn-filter-select">Giá lẻ online<i class="fa-solid fa-xmark"></i></button>
+          <button class="btn-filter-select">Trên 2 sao<i class="fa-solid fa-xmark"></i></button>
+          <button class="btn-filter-select">Giá tăng dần <i class="fa-solid fa-xmark"></i></button> -->
+        </div>
+        <hr class="hr-filter"  style="margin: 30px 0 60px 0; z-index: 1;display: none;" />
+        <div class="produc-frame-filter" style="display: none;">
+          <ul class="product-frame-list">
+            <li class="product-frame-item">
+              <a href="chitietsanpham.html" class="product-item">
+                <img
+                  src="img/products/samsung-galaxy-a8-plus-2018-gold-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Samsung Galaxy A8+ (2018)</h3>
+                <div class="product-item-price">
+                  <strong>11.990.000₫</strong>
+                  <span>13.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <label class="discount-product">
+                  <i class="fa-solid fa-bolt"></i>
+                  Giảm 500.000₫
+                </label>
+              </a>
+                <button class="btn-add">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+          </ul>
+        </div>
+        <hr class="nganCach" style="margin: 30px 0 60px 0; z-index: 1" />
         <div class="product-frame" style="border-color: #ff9c00">
           <div
             class="product-frame-title"
@@ -300,9 +345,9 @@
                 </button>
             </li>
           </ul>
-          <a href="" class="product-frame-extend">Xem thêm 39 sản phẩm</a>
+          <a href="#" onclick="addFilter('promo','all')" class="product-frame-extend">Xem thêm sản phẩm</a>
         </div>
-        <hr style="margin: 60px 0; z-index: 1" />
+        <hr class="nganCach" style="margin: 60px 0; z-index: 1" />
         <div class="product-frame" style="border-color: #42bcf4">
           <div
             class="product-frame-title"
@@ -474,9 +519,9 @@
                 </button>
             </li>
           </ul>
-          <a href="" class="product-frame-extend">Xem thêm 39 sản phẩm</a>
+          <a href="#" onclick="addFilter('promo','moiramat')" class="product-frame-extend">Xem thêm sản phẩm</a>
         </div>
-        <hr style="margin: 60px 0; z-index: 1" />
+        <hr class="nganCach" style="margin: 60px 0; z-index: 1" />
         <div class="product-frame" style="border-color: #ff9c00">
           <div
             class="product-frame-title"
@@ -648,9 +693,9 @@
                 </button>
             </li>
           </ul>
-          <a href="" class="product-frame-extend">Xem thêm 39 sản phẩm</a>
+          <a href="#" onclick="addFilter('promo','tragop')" class="product-frame-extend">Xem thêm sản phẩm</a>
         </div>
-        <hr style="margin: 60px 0; z-index: 1" />
+        <hr class="nganCach" style="margin: 60px 0; z-index: 1" />
         <div class="product-frame" style="border-color: #5de272">
           <div
             class="product-frame-title"
@@ -822,9 +867,9 @@
                 </button>
             </li>
           </ul>
-          <a href="" class="product-frame-extend">Xem thêm 39 sản phẩm</a>
+          <a href="#" onclick="addFilter('promo','giareonline')" class="product-frame-extend">Xem thêm sản phẩm</a>
         </div>
-        <hr style="margin: 60px 0; z-index: 1" />
+        <hr class="nganCach" style="margin: 60px 0; z-index: 1" />
         <div class="product-frame" style="border-color: #ff9c00">
           <div
             class="product-frame-title"
@@ -996,7 +1041,7 @@
                 </button>
             </li>
           </ul>
-          <a href="" class="product-frame-extend">Xem thêm 39 sản phẩm</a>
+          <a href="#" onclick="addFilter('promo','giamgia')" class="product-frame-extend">Xem thêm sản phẩm</a>
         </div>
       </div>
 
@@ -1004,9 +1049,12 @@
         <script>
           addFooter();
         </script>
+        <script src="js/filter.js"></script>
         <script src="js/cart.js"></script>
         <script src="js/toast.js"></script>
+        <script src="data/products.js"></script>
       </div>
+      
     </div>
 
     <i class="fa-solid fa-arrow-up arrow-top" onclick="goToTop()"></i>

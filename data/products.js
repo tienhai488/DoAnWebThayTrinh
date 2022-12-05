@@ -1200,3 +1200,4 @@ var list_products = [
     },
   ];
   
+localStorage.setItem("ListProduct",JSON.stringify(list_products))

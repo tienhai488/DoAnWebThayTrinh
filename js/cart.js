@@ -1,5 +1,40 @@
-const btns = document.querySelectorAll(".btn-add")
-
+let btns = document.querySelectorAll(".btn-add")
+const resetBtn = ()=>{
+  btns = document.querySelectorAll(".btn-add")
+  btns.forEach((item,index)=>{
+    const account = JSON.parse(localStorage.getItem("AccountLogin"))
+      item.onclick = ()=>{
+          if(account!=null){
+            parent = item.parentElement
+          let nameProduct = parent.querySelector('h3').innerHTML
+          let priceProduct = parent.querySelector('.product-item-price strong').innerHTML
+  
+          let arr = priceProduct.split(".")
+          let result = ""
+          for(var i=0;i<arr.length-1;i++){
+              result += arr[i]
+          }
+          result += "000"
+          toast({
+            title: "Thành công!",
+            message: `Đã thêm vào giỏ hàng sản phẩm ${nameProduct}!`,
+            type: "success",
+            duration: 1000
+          });
+  
+          addData(nameProduct,result)
+          }else {
+            toast({
+              title: "Thất bại!",
+              message: `Bạn chưa đăng nhập tài khoản!`,
+              type: "error",
+              duration: 1000
+            });
+            onForm()
+          }
+      }
+  })
+}
 btns.forEach((item,index)=>{
   const account = JSON.parse(localStorage.getItem("AccountLogin"))
     item.onclick = ()=>{
@@ -27,13 +62,14 @@ btns.forEach((item,index)=>{
           toast({
             title: "Thất bại!",
             message: `Bạn chưa đăng nhập tài khoản!`,
-            type: "danger",
+            type: "error",
             duration: 1000
           });
           onForm()
         }
     }
 })
+
 
 const addData = (nameProduct,result)=>{
   let arr = localStorage.getItem("DanhSachGioHang");
@@ -199,7 +235,6 @@ const giamSoLuong = (index)=>{
     localStorage.setItem("DanhSachGioHang",JSON.stringify(arr))
   }
 }
-
 
 
 

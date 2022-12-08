@@ -1,14 +1,10 @@
-// console.log(window.location.href) 
-// // returns the href (URL) of the current page
-// console.log(window.location.hostname) 
-// // returns the domain name of the web host
-// console.log(window.location.pathname) 
-// // returns the path and filename of the current page
-// console.log(window.location.protocol) 
-// // returns the web protocol used (http: or https:)
-// location.replace("http://127.0.0.1:5500/index.html?promo=giamgia");
 
 const addFilter = (key,value)=>{
+    
+    let arr = window.location.href.split('?')
+    if(arr[0].indexOf("http://127.0.0.1:5500/index.html")!=-1){
+        console.log(arr[0]);
+    }
     let obj = JSON.parse(localStorage.getItem("Filter"))
     obj[key] = value
     obj['check'] = true
@@ -26,6 +22,7 @@ const convertPrice = (str)=>{
 // console.log(JSON.parse(localStorage.getItem('Filter')).promo);
 
 const setFilter = ()=>{
+    // location.replace('http://127.0.0.1:5500/index.html')
     const frameFilter = document.querySelector('.produc-frame-filter')
     const hr_filter = document.querySelector('.hr-filter')
     let filterProduct = JSON.parse(localStorage.getItem("Filter"))
@@ -120,30 +117,30 @@ const setFilter = ()=>{
             strStart += `<i class="fa-regular fa-star"></i>`
         }
         strItem += `<li class="product-frame-item">
-        <a href="chitietsanpham.html" class="product-item">
-          <img
-            src="${item.img}"
-            alt=""
-          />
-          <h3 class="product-item-name">${item.name}</h3>
-          <div class="product-item-price">
-            <strong>${item.price}₫</strong>
-            <span>${item.promo.name == "giareonline" ? item.promo.value:""}</span>
-          </div>
-          <div class="product-item-rating">
-            ${strStart}
-            <span>${item.rateCount} đánh giá</span>
-          </div>
-          ${item.promo.name=="moiramat" ? `<label class="new-product">Mới ra mắt</label>` : ""} 
-          ${item.promo.name=="giareonline" ? `<label class="cheap-product">Giá rẻ online</label>` : ""} 
-          ${item.promo.name=="tragop" ? `<label class="cheap-product">Trả góp 0%</label>` : ""} 
-          ${item.promo.name=="giamgia" ? `<label class="discount-product">
-          <i class="fa-solid fa-bolt"></i>
-          Giảm ${item.promo.value}₫
-        </label>` : ""} 
-          
-        </a>
-          <button class="btn-add">
+            <a href="chitietsanpham.html?${item.masp}" class="product-item">
+            <img
+                src="${item.img}"
+                alt=""
+            />
+            <h3 class="product-item-name">${item.name}</h3>
+            <div class="product-item-price">
+                <strong>${item.price}₫</strong>
+                <span>${item.promo.name == "giareonline" ? item.promo.value:""}</span>
+            </div>
+            <div class="product-item-rating">
+                ${strStart}
+                <span>${item.rateCount} đánh giá</span>
+            </div>
+            ${item.promo.name=="moiramat" ? `<label class="new-product">Mới ra mắt</label>` : ""} 
+            ${item.promo.name=="giareonline" ? `<label class="cheap-product">Giá rẻ online</label>` : ""} 
+            ${item.promo.name=="tragop" ? `<label class="cheap-product">Trả góp 0%</label>` : ""} 
+            ${item.promo.name=="giamgia" ? `<label class="discount-product">
+            <i class="fa-solid fa-bolt"></i>
+            Giảm ${item.promo.value}₫
+            </label>` : ""} 
+            
+            </a>
+          <button onclick="resetBtn()" class="btn-add" >
             +
             <label class="btn-add-title">Thêm vào giỏ </label>
           </button>
@@ -159,6 +156,7 @@ const setFilter = ()=>{
 
     productList.innerHTML = strItem
     addBtn();
+    resetBtn()
     }else {
         listFrame.forEach(item=>item.style.display = "block")
         listNganCach.forEach(item=>item.style.display="block")

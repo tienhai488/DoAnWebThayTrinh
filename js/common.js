@@ -214,7 +214,8 @@ const onLogout = ()=>{
    const check = confirm("Ban co chac chan muon thoat?")
    if(check){
       localStorage.setItem("AccountLogin",JSON.stringify(null))
-   location.reload()
+      localStorage.setItem("DanhSachGioHang",JSON.stringify([]))
+      location.reload()
    }
 }
 
@@ -444,14 +445,11 @@ const onRegister = () => {
   gr2.style.right = "-200px";
 };
 
-// const handleActive = () => {
-//   const listItem = document.querySelectorAll(".header-item");
-//   console.log(listItem);
-//   listItem.forEach((item) => {
-//     item.onclick = () => item.classList.add("active");
-//   });
-// };
 
 
+
+
+
+ 
       
 

@@ -237,57 +237,7 @@
   color: white;
 }
 
-.btn-add {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background-color: transparent;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  font-weight: 500;
-  color: #888;
-  transition: 0.2s all linear;
-}
-.btn-add .btn-add-title {
-  z-index: 5;
-  position: absolute;
-  top: -35px;
-  left: 0px;
-  width: 100px;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
-  color: white;
-  line-height: 1.6;
-  border-radius: 4px;
-  transform: translateX(calc(-50% + 18px));
-  display: none;
-  transition: 0.2s all linear;
-}
 
-.btn-add:hover .btn-add-title {
-  display: block;
-}
-
-.btn-add .btn-add-title::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: calc(50% + -6px);
-  border: 4px solid transparent;
-  border-top: 4px solid rgba(0, 0, 0, 0.6);
-}
-
-.btn-add:hover {
-  background-color: #ccc;
-  color: black;
-  cursor: pointer;
-}
 
 .product-frame-extend {
   color: #888;

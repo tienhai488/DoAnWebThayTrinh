@@ -8,12 +8,13 @@
       src="https://kit.fontawesome.com/a34dc8f891.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/chitietsanpham.css" />
+    <link rel="stylesheet" href="css/chitietsanphamupdate.css" />
     <link rel="stylesheet" href="css/headingfooter.css" />
     <link rel="stylesheet" href="css/form.css">
-    <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/btnAdd.css" />
     <link rel="stylesheet" href="css/thongbao.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <title>Chi tiết sản phẩm</title>
@@ -27,545 +28,458 @@
          <script>
          addHeader();
          </script>
-         <div class="product_intro">
-            <h1 class="product_name">iPhone 13 Pro Max 128GB</h1>
-            <div class="product_rating">
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star"></i>
-               <i class="fa-solid fa-star-half-stroke"></i>
-               <span style="color: #5463ff">&nbsp;100 Góp ý</span> &#9475;<span
-                  style="color: #5463ff"
-                  >100 Bình luận</span
-               >
-            </div>
-         </div>
-         <div class="product_info">
-            <div class="product_onright">
-               <div class="slideshow-container">
-                  <div class="mySlides fade">
-                     <div class="numbertext">1 / 4</div>
-                     <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-model-select-202207-6-1inch_AV1?wid=5120&hei=2880&fmt=jpeg&qlt=90&.v=1655412908179" style="width:100%">
-                     <div class="text">iPhone</div>
+         <div class="chitietSanpham">
+          <!-- <h1 style="font-family: Helvetica">Điện thoại iPhone 11 256GB Red PRODUCT</h1>
+          <div class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <span>10 đánh giá</span></div>
+          <div class="rowdetail group">
+              <div class="picture">
+                  <img src="https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-do-1-1-1-org.jpg">
+              </div>
+              <div class="price_sale">
+                  <div class="area_price" style="font-family: sans-serif"><strong>27.990.000₫</strong>
+                          <span style="font-family: sans-serif">31.990.000₫</span></div>
+                  <div class="ship">
+                      <i class="fa-solid fa-clock-rotate-left"></i>
+                      <div style="font-family: sans-serif">NHẬN HÀNG TRONG 1 GIỜ</div>
                   </div>
-                  <div class="mySlides fade">
-                     <div class="numbertext">2 / 4</div>
-                     <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202207-6-1inch-product-red?wid=5120&hei=2880&fmt=jpeg&qlt=90&.v=1656720518797" style="width:100%">
-                     <div class="text">13</div>
+                  <div class="area_promo">
+                      <strong>khuyến mãi</strong>
+                      <div class="promo">
+                          <img src="img/chitietsanpham/icon-tick.png">
+                          <div id="detailPromo">Sản phẩm sẽ được giảm <span style="font-weight: bold">0.000.000</span>₫ khi mua hàng online</div>
+                      </div>
                   </div>
-                  <div class="mySlides fade">
-                     <div class="numbertext">3 / 4</div>
-                     <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202207-6-1inch-product-red_AV1_GEO_US?wid=5120&hei=2880&fmt=jpeg&qlt=90&.v=1656720517111" style="width:100%">
-                     <div class="text">Pro</div>
+                  <div class="policy">
+                      <div>
+                          <i class="fa-solid fa-check"></i>
+                          <p>Trong hộp có: Sạc, Tai nghe, Sách hướng dẫn, Cây lấy sim, Ốp lưng </p>
+                      </div>
+                      <div>
+                          <i class="fa-solid fa-check"></i>
+                          <p>Bảo hành chính hãng 12 tháng.</p>
+                      </div>
+                      <div class="last">
+                          <i class="fa-solid fa-check"></i>
+                          <p>1 đổi 1 trong 1 tháng nếu lỗi, đổi sản phẩm tại nhà trong 1 ngày.</p>
+                      </div>
                   </div>
-                  <div class="mySlides fade">
-                     <div class="numbertext">4 / 4</div>
-                     <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202207-6-1inch-product-red_AV2?wid=5120&hei=2880&fmt=jpeg&qlt=90&.v=1656720524284" style="width:100%">
-                     <div class="text">Max</div>
+                  <div class="area_order">
+                      <a class="buy_now" onclick="themVaoGioHang(maProduct, nameProduct);">
+                          <b><i class="fa fa-cart-plus"></i> Thêm vào giỏ hàng</b>
+                          <p>Giao trong 1 giờ hoặc nhận tại cửa hàng</p>
+                      </a>
                   </div>
-                  <a class="prev" onclick="plusSlides(-1)">❮</a>
-                  <a class="next" onclick="plusSlides(1)">❯</a>
-               </div>
-               <div style="text-align:center">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span>
-                  <span class="dot" onclick="currentSlide(4)"></span> 
-               </div>
-               <div class="product_warranty">
-                  <ul>
-                     <li><i class="fa-solid fa-arrows-rotate"></i><span> Hư gì đổi nấy 12 tháng tại 3347 siêu thị toàn quốc <a href="#none" target="_blank" style="text-decoration: none;">Xem chi tiết</a></span></li>
-                     <li><i class="fa-solid fa-clipboard-check"></i><span> Bảo hành chính hãng điện thoại 1 năm tại các trung tâm bảo hành hãng<a href="#none" target="_blank" style="text-decoration: none;"> Xem chi tiết</a></span></li>
-                     <li><i class="fa-solid fa-box-open"></i></i><span> Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Lightning-Type C <a href="#none" target="_blank" style="text-decoration: none;">Xem chi tiết</a></span></li>
-                  </ul>
-               </div>
-            </div>
-            <div class="product_onleft">
-               <div>
-                  <h1 style="display: block; float: left; color: #FF1818;">27.490.000<u>đ</u>&nbsp;&nbsp;</h1>
-                  <h1 style="display: block; float: left; position: relative; top: 4px; font-size: 24px; font-weight: normal; color: #ECECEC"><s>33.990.000<u>đ</u></s></h1>
-                  <ul style="display: block; float: right; list-style-type: none; font-size: 12px;">
-                     <li style="position: relative; bottom: 6px;">Trả góp chỉ từ</li>
-                     <li style="position: relative; bottom: 16px;"><strong>2.115.500<u>đ</u></strong>/tháng</h1></li>
-                  </ul>
-               </div>
-               <div class="product_options">
-                  <ul>
-                     <li><a href="https://fptshop.com.vn/dien-thoai/iphone-13-pro-max" target="_blank"><strong>128GB</strong><br>27.490.000<u>đ</u></a></li>
-                     <li><a href="https://fptshop.com.vn/dien-thoai/iphone-13-pro-max?dung-luong=256gb" target="_blank"><strong>256GB</strong><br>29.990.000<u>đ</u></a></li>
-                     <li><a href="https://fptshop.com.vn/dien-thoai/iphone-13-pro-max?dung-luong=512gb" target="_blank"><strong>512GB</strong><br>32.990.000<u>đ</u></a></li>
-                     <li style="margin-right: 0px;"><a href="https://fptshop.com.vn/dien-thoai/iphone-13-pro-max?dung-luong=1tb" target="_blank"><strong>1TB</strong><br>37.490.000<u>đ</u></a></li>
-                  </ul>
-               </div>
-               <div class="product_color">
-                  <ul>
-                     <li>
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-pink-202108?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1630016970000">
-                     </li>
-                     <li>
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-blue-202108?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1630016970000">
-                     </li>
-                     <li>
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-midnight-202108?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1630016969000">
-                     </li>
-                     <li>
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-starlight-202108?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1630016970000">
-                     </li>
-                     <li>
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-green-202203?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1645218698057">
-                     </li>
-                     <li style="margin-right: 4px;">
-                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-product-red-202108?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=90&amp;.v=1630016971000">
-                     </li>
-                  </ul>
-               </div>
-               <img style="display: block; margin-top: 26px;" src="https://store.storeimages.cdn-apple.com/4982/store.apple.com/shop/rs-iphone/2/dist/assets/ac-colornav/productred.svg">
-               <div class="product_promo">
-                  <p>Khuyến mãi ngập tràn</p>
-                  <ul>
-                     <li><i class="fa-sharp fa-solid fa-circle-check"></i><span> Tặng PMH 400.000đ khi mua Sạc 35W</span></li>
-                     <li><i class="fa-sharp fa-solid fa-circle-check"></i><span> Bảo hành 2 năm chính hãng</span></li>
-                     <li><i class="fa-sharp fa-solid fa-circle-check"></i><span> Giảm đến 20% củ sạc nhanh 25W <a href="#none" target="_blank" style="text-decoration: none;">Xem chi tiết</a></span></li>
-                  </ul>
-               </div>
-               <div>
-                  <i class="fa-solid fa-location-dot" style="color: #0664f9"></i><span><a href="#none" target="_blank" style="text-decoration: none; font-size: 16px; color: #0664f9;"> Xem siêu thị có hàng</a></span>
-               </div>
-               <div class="cart_button">
-                  <a href="#none" target="_blank" style="width: 100%; background-color: #cb1c22; color: white; text-decoration: none; font-size: 20px;">
-                     MUA NGAY
-                     <p style="font-size: 14px;">Giao hàng miễn phí trong 1 giờ hoặc nhận tại cửa hàng</p>
+              </div>
+              <div class="info_product">
+                  <h2 style="font-family: sans-serif">Thông số kỹ thuật</h2>
+                  <ul class="info"><li>
+              <p>Màn hình</p>
+              <div>IPS LCD6.1"Liquid Retina</div>
+          </li><li>
+              <p>Hệ điều hành</p>
+              <div>iOS 15</div>
+          </li><li>
+              <p>Camara sau</p>
+              <div>2 camera 12 MP</div>
+          </li><li>
+              <p>Camara trước</p>
+              <div>12 MP</div>
+          </li><li>
+              <p>CPU</p>
+              <div>Apple A13 Bionic</div>
+          </li><li>
+              <p>RAM</p>
+              <div>4 GB</div>
+          </li><li>
+              <p>Bộ nhớ trong</p>
+              <div>256 GB</div>
+          </li><li>
+              <p>SIM</p>
+              <div>1 Nano SIM & 1 eSIMHỗ trợ 4G</div>
+          </li><li>
+              <p>Pin, Sạc</p>
+              <div>3110 mAh18 W</div>
+          </li></ul>
+              </div>
+          </div>
+          <div id="overlaycertainimg" class="overlaycertainimg" style="transform: scale(0);">
+              <div class="close" onclick="closecertain()">×</div>
+              <div class="overlaycertainimg-content">
+                  <img id="bigimg" class="bigimg" src="https://tienhai488.github.io/DoAnWeb1/img/chitietsanpham/oppo-f9-mau-do-2-org.jpg">
+                  <div class="div_smallimg owl-carousel owl-loaded owl-drag">
+                    
+                  <div class="owl-stage-outer"><div class="owl-stage" style="transition: all 0s ease 0s; width: 1477px; transform: translate3d(422px, 0px, 0px);"><div class="owl-item active center" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/products/huawei-mate-20-pro-green-600x600.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div><div class="owl-item active" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/chitietsanpham/oppo-f9-mau-do-1-org.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div><div class="owl-item active" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/chitietsanpham/oppo-f9-mau-do-2-org.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div><div class="owl-item" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/chitietsanpham/oppo-f9-mau-do-3-org.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div><div class="owl-item" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/products/huawei-mate-20-pro-green-600x600.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div><div class="owl-item" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/chitietsanpham/oppo-f9-mau-do-3-org.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div><div class="owl-item" style="width: 211px;"><div class="item">
+                      <a>
+                          <img src="img/products/huawei-mate-20-pro-green-600x600.jpg" onclick="changepic(this.src)">
+                      </a>
+                  </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button></div></div>
+              </div>
+          </div> -->
+        </div> 
+
+        <div class="product-frame" style="border-color: #42bcf4; display: inline-block;margin-top: 100px;" >
+          <div
+            class="product-frame-title"
+            style="
+              background-image: linear-gradient(
+                120deg,
+                #42bcf4 0%,
+                #004c70 50%,
+                #42bcf4 100%
+              );
+            "
+          >
+            * BẠN CÓ THỂ THÍCH *
+          </div>
+          <ul class="product-frame-list">
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?samsung-galaxy-j4-plus-pink-400x400" class="product-item">
+                <img
+                  src="img/products/samsung-galaxy-j4-plus-pink-400x400.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">SamSung Galaxy J4+</h3>
+                <div class="product-item-price">
+                  <strong>3.490.000₫</strong>
+                  <span>3.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <label class="discount-product">
+                  <i class="fa-solid fa-bolt"></i>
+                  Giảm 500.000₫
+                </label>
+              </a>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?xiaomi-mi-8-lite-black-1" class="product-item">
+                <img
+                  src="img/products/xiaomi-mi-8-lite-black-1-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Xiaomi Mi 8 Lite</h3>
+                <div class="product-item-price">
+                  <strong>6.690.000₫</strong>
+                  <span>7.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <label class="cheap-product">Giá rẻ online</label>
+                <!-- <label class="discount-product">
+                      <i class="fa-solid fa-bolt"></i>
+                      Giảm 500.000₫
+                    </label> -->
                   </a>
-                  <a href="#none" target="_blank" style="float: left; background-color: #007aff; color: white; text-decoration: none; font-size: 20px;">
-                     TRẢ GÓP 0%
-                     <p style="font-size: 14px;">Duyệt hồ sơ trong 5 phút</p>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?oppo-f9-red-600x600.jpg" class="product-item">
+                <img
+                  src="img/products/oppo-f9-red-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Oppo F9</h3>
+                <div class="product-item-price">
+                  <strong>7.690.000₫</strong>
+                  <span>8.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <label class="cheap-product">Giá rẻ online</label>
+                <!-- <label class="discount-product">
+                      <i class="fa-solid fa-bolt"></i>
+                      Giảm 500.000₫
+                    </label> -->
                   </a>
-                  <a href="#none" target="_blank" style="float: right; background-color: #007aff; color: white; text-decoration: none; font-size: 20px;">
-                     TRẢ GÓP QUA THẺ
-                     <p style="font-size: 14px;">VISA, MASTERCARD</p>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?nokia-51-plus-black-18thangbh-400x400" class="product-item">
+                <img
+                  src="img/products/nokia-51-plus-black-18thangbh-400x400.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Nokia 5.1 Plus</h3>
+                <div class="product-item-price">
+                  <strong>4.790.000₫</strong>
+                  <span>7.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <label class="new-product">Mới ra mắt</label>
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <!-- <label class="discount-product">
+                      <i class="fa-solid fa-bolt"></i>
+                      Giảm 500.000₫
+                    </label> -->
                   </a>
-               </div>
-               <div class="product_details">
-                  <table>
-                     <tr>
-                        <th colspan="2">Thông số kỹ thuật</th>
-                     </tr>
-                     <tr>
-                        <td>Màn hình</td>
-                        <td>6.7 inch, OLED, Super Retina XDR, 2778 x 1284 Pixels</td>
-                     </tr>
-                     <tr>
-                        <td>Camera sau</td>
-                        <td>12.0 MP + 12.0 MP + 12.0 MP</td>
-                     </tr>
-                     <tr>
-                        <td>Camera Selfie</td>
-                        <td>12.0 MP</td>
-                     </tr>
-                     <tr>
-                        <td>RAM</td>
-                        <td>6 GB</td>
-                     </tr>
-                     <tr>
-                        <td>Bộ nhớ trong</td>
-                        <td>128 GB</td>
-                     </tr>
-                     <tr>
-                        <td>CPU</td>
-                        <td>Apple A15 Bionic</td>
-                     </tr>
-                     <tr>
-                        <td>GPU</td>
-                        <td>Apple GPU 5 nhân</td>
-                     </tr>
-                     <tr>
-                        <td>Dung lượng pin</td>
-                        <td>4352 mAh</td>
-                     </tr>
-                     <td>Thẻ sim</td>
-                     <td>1 - 1 eSIM, 1 Nano SIM</td>
-                     </tr>
-                     <td>Hệ điều hành</td>
-                     <td>iOS 15</td>
-                     </tr>
-                     <td>Xuất xứ</td>
-                     <td>Trung Quốc</td>
-                     </tr>
-                     </tr>
-                     <td>Thời gian ra mắt</td>
-                     <td>09/2021</td>
-                     </tr>
-                  </table>
-               </div>
-            </div>
-         </div>
-    </div>
-    <!-- san pham them -->
-    <div class="grid">
-      <div class="product-frame" style="border-color: #42bcf4; display: flow-root;" >
-        <div
-          class="product-frame-title"
-          style="
-            background-image: linear-gradient(
-              120deg,
-              #42bcf4 0%,
-              #004c70 50%,
-              #42bcf4 100%
-            );
-          "
-        >
-          * BẠN CÓ THỂ THÍCH *
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?samsung-galaxy-a8-plus-2018-gold" class="product-item">
+                <img
+                  src="img/products/samsung-galaxy-a8-plus-2018-gold-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Samsung Galaxy A8+ (2018)</h3>
+                <div class="product-item-price">
+                  <strong>11.990.000₫</strong>
+                  <span>15.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <label class="discount-product">
+                  <i class="fa-solid fa-bolt"></i>
+                  Giảm 500.000₫
+                </label>
+              </a>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?iphone-x-256gb-silver-400x400.jpg" class="product-item">
+                <img
+                  src="img/products/iphone-x-256gb-silver-400x400.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">iPhone X 256GB Silver</h3>
+                <div class="product-item-price">
+                  <strong>31.990.000₫</strong>
+                  <span>36.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <label class="discount-product">
+                  <i class="fa-solid fa-bolt"></i>
+                  Giảm 500.000₫
+                </label>
+              </a>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?oppo-a3s-32gb-600x600.jpg" class="product-item">
+                <img
+                  src="img/products/oppo-a3s-32gb-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Oppo A3s 32GB</h3>
+                <div class="product-item-price">
+                  <strong>4.690.000₫</strong>
+                  <span>6.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <label class="cheap-product">Giá rẻ online</label>
+                <!-- <label class="discount-product">
+                      <i class="fa-solid fa-bolt"></i>
+                      Giảm 500.000₫
+                    </label> -->
+                  </a>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?samsung-galaxy-j8-600x600-600x600.jpg" class="product-item">
+                <img
+                  src="img/products/samsung-galaxy-j8-600x600-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">Samsung Galaxy J8</h3>
+                <div class="product-item-price">
+                  <strong>6.290.000₫</strong>
+                  <span>8.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <label class="cheap-product">Giá rẻ online</label>
+                <!-- <label class="discount-product">
+                      <i class="fa-solid fa-bolt"></i>
+                      Giảm 500.000₫
+                    </label> -->
+                  </a>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?ipad-wifi-32gb-2018-thumb-600x600" class="product-item">
+                <img
+                  src="img/products/ipad-wifi-32gb-2018-thumb-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">iPad 2018 Wifi 32GB</h3>
+                <div class="product-item-price">
+                  <strong>8.990.000₫</strong>
+                  <span>11.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <label class="new-product">Mới ra mắt</label>
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <!-- <label class="discount-product">
+                      <i class="fa-solid fa-bolt"></i>
+                      Giảm 500.000₫
+                    </label> -->
+                  </a>
+                <button class="btn-add"  onclick="showSuccessToast();" >
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+            <li class="product-frame-item" style="position: relative;">
+              <a href="chitietsanpham.html?iphone-7-plus-32gb-hh-600x600" class="product-item">
+                <img
+                  src="img/products/iphone-7-plus-32gb-hh-600x600.jpg"
+                  alt=""
+                />
+                <h3 class="product-item-name">iPhone 7 Plus 32GB</h3>
+                <div class="product-item-price">
+                  <strong>17.000.000₫</strong>
+                  <span>19.990.000₫</span>
+                </div>
+                <div class="product-item-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <span>10 đánh giá</span>
+                </div>
+                <!-- <label class="new-product">Mới ra mắt</label> -->
+                <!-- <label class="cheap-product">Giá rẻ online</label> -->
+                <label class="discount-product">
+                  <i class="fa-solid fa-bolt"></i>
+                  Giảm 500.000₫
+                </label>
+              </a>
+                <button class="btn-add"  onclick="showSuccessToast();">
+                  +
+                  <label class="btn-add-title">Thêm vào giỏ </label>
+                </button>
+            </li>
+          </ul>
         </div>
-        <ul class="product-frame-list">
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/samsung-galaxy-j4-plus-pink-400x400.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">SamSung Galaxy J4+</h3>
-              <div class="product-item-price">
-                <strong>3.490.000₫</strong>
-                <span>3.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <!-- <label class="cheap-product">Giá rẻ online</label> -->
-              <label class="discount-product">
-                <i class="fa-solid fa-bolt"></i>
-                Giảm 500.000₫
-              </label>
-            </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/xiaomi-mi-8-lite-black-1-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">Xiaomi Mi 8 Lite</h3>
-              <div class="product-item-price">
-                <strong>6.690.000₫</strong>
-                <span>7.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <label class="cheap-product">Giá rẻ online</label>
-              <!-- <label class="discount-product">
-                    <i class="fa-solid fa-bolt"></i>
-                    Giảm 500.000₫
-                  </label> -->
-                </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/oppo-f9-red-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">Oppo F9</h3>
-              <div class="product-item-price">
-                <strong>7.690.000₫</strong>
-                <span>8.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <label class="cheap-product">Giá rẻ online</label>
-              <!-- <label class="discount-product">
-                    <i class="fa-solid fa-bolt"></i>
-                    Giảm 500.000₫
-                  </label> -->
-                </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/nokia-51-plus-black-18thangbh-400x400.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">Nokia 5.1 Plus</h3>
-              <div class="product-item-price">
-                <strong>4.790.000₫</strong>
-                <span>7.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <label class="new-product">Mới ra mắt</label>
-              <!-- <label class="cheap-product">Giá rẻ online</label> -->
-              <!-- <label class="discount-product">
-                    <i class="fa-solid fa-bolt"></i>
-                    Giảm 500.000₫
-                  </label> -->
-                </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/samsung-galaxy-a8-plus-2018-gold-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">Samsung Galaxy A8+ (2018)</h3>
-              <div class="product-item-price">
-                <strong>11.990.000₫</strong>
-                <span>15.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <!-- <label class="cheap-product">Giá rẻ online</label> -->
-              <label class="discount-product">
-                <i class="fa-solid fa-bolt"></i>
-                Giảm 500.000₫
-              </label>
-            </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/iphone-x-256gb-silver-400x400.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">iPhone X 256GB Silver</h3>
-              <div class="product-item-price">
-                <strong>31.990.000₫</strong>
-                <span>36.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <!-- <label class="cheap-product">Giá rẻ online</label> -->
-              <label class="discount-product">
-                <i class="fa-solid fa-bolt"></i>
-                Giảm 500.000₫
-              </label>
-            </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/oppo-a3s-32gb-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">Oppo A3s 32GB</h3>
-              <div class="product-item-price">
-                <strong>4.690.000₫</strong>
-                <span>6.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <label class="cheap-product">Giá rẻ online</label>
-              <!-- <label class="discount-product">
-                    <i class="fa-solid fa-bolt"></i>
-                    Giảm 500.000₫
-                  </label> -->
-                </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/samsung-galaxy-j8-600x600-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">Samsung Galaxy J8</h3>
-              <div class="product-item-price">
-                <strong>6.290.000₫</strong>
-                <span>8.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <label class="cheap-product">Giá rẻ online</label>
-              <!-- <label class="discount-product">
-                    <i class="fa-solid fa-bolt"></i>
-                    Giảm 500.000₫
-                  </label> -->
-                </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/ipad-wifi-32gb-2018-thumb-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">iPad 2018 Wifi 32GB</h3>
-              <div class="product-item-price">
-                <strong>8.990.000₫</strong>
-                <span>11.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <label class="new-product">Mới ra mắt</label>
-              <!-- <label class="cheap-product">Giá rẻ online</label> -->
-              <!-- <label class="discount-product">
-                    <i class="fa-solid fa-bolt"></i>
-                    Giảm 500.000₫
-                  </label> -->
-                </a>
-              <button class="btn-add"  onclick="showSuccessToast();" >
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-          <li class="product-frame-item" style="position: relative;">
-            <a href="chitietsanpham.html" class="product-item">
-              <img
-                src="img/products/iphone-7-plus-32gb-hh-600x600.jpg"
-                alt=""
-              />
-              <h3 class="product-item-name">iPhone 7 Plus 32GB</h3>
-              <div class="product-item-price">
-                <strong>17.000.000₫</strong>
-                <span>19.990.000₫</span>
-              </div>
-              <div class="product-item-rating">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <span>10 đánh giá</span>
-              </div>
-              <!-- <label class="new-product">Mới ra mắt</label> -->
-              <!-- <label class="cheap-product">Giá rẻ online</label> -->
-              <label class="discount-product">
-                <i class="fa-solid fa-bolt"></i>
-                Giảm 500.000₫
-              </label>
-            </a>
-              <button class="btn-add"  onclick="showSuccessToast();">
-                +
-                <label class="btn-add-title">Thêm vào giỏ </label>
-              </button>
-          </li>
-        </ul>
       </div>
-    </div>
+
     <script>addFooter();</script>
-    <script src="js/cart.js"></script>
     <script src="js/toast.js"></script>
-    <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      function currentSlide(n) {
-        showSlides((slideIndex = n));
-      }
-
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-      }
-
-    </script>
+    <script src="js/chitietsanpham.js"></script>
+    <script src="js/cart.js"></script>
+ 
   </body>
 </html>

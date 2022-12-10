@@ -181,13 +181,13 @@ const addHeader = () => {
             <li id="user1" class="user">
                <a href="" class="acount">
                   <i class="fa-solid fa-user" id="user2"></i>
-                  ${ account==null ? "Tai Khoan" : account.user_name }
+                  ${ account==null ? "Tài khoản" : account.user_name }
                   <ul class="sub">
                      <li id="sub1">
                <a href="" >Trang người dùng</a>
                </li>   
                <li id="sub1">
-               ${account==null ? `<a href="#"  onclick="onForm()" > Dang nhap </a>` : `<a href="#"  onclick="onLogout()" >Dang xuat</a>`}
+               ${account==null ? `<a href="#"  onclick="onForm()" > Dang nhap </a>` : `<a href="#"  onclick="onLogout()" >Đăng xuất</a>`}
                </li>
                </ul></a>
             </li>
